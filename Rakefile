@@ -1,31 +1,17 @@
 # encoding: utf-8
-
-#require 'rubygems'
-#require 'bundler'
-#begin
-#  Bundler.setup(:default, :development)
-#rescue Bundler::BundlerError => e
-#  $stderr.puts e.message
-#  $stderr.puts "Run `bundle install` to install missing gems"
-#  exit e.status_code
-#end
 require 'rake'
-
 require 'jeweler'
+
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "plympton-refactor"
-  gem.homepage = "http://github.com/rogwfu/plympton-refactor"
+  gem.name = "plympton"
+  gem.homepage = "http://github.com/rogwfu/plympton"
   gem.license = "MIT"
   gem.summary = %Q{Reads a YAML dump of a program's disassembly from IDA Pro}
   gem.description = %Q{A Gem to read program disassembly from a YAML dump.  The YAML dump is generated from an ida pro python script.  This script is included along with this Gem (func.py)}
   gem.email = "roger.seagle@gmail.com"
   gem.authors = ["Roger Seagle"]
   gem.required_ruby_version = '>= 1.9.3'
-  # dependencies defined in Gemfile
-  gem.add_dependency('nokogiri', '= 1.5.0') 
-  gem.add_dependency('antlr3', '= 1.8.12') 
-  gem.add_dependency('narray', '>= 0.5.9')
 end
 
 
@@ -50,7 +36,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "plympton-refactor #{version}"
+  rdoc.title = "plympton #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
